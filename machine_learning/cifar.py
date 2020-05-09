@@ -52,6 +52,7 @@ class Cifar(object):
         plt.show()
         return model.evaluate(test_images, test_lables, verbose=2)
 
+    # 展示数据
     def show_data(self, train_images, test_images, train_labels):
         # Normalize pixel values to be between 0 and 1
         train_images, test_images = train_images / 255.0, test_images / 255.0
@@ -68,6 +69,7 @@ class Cifar(object):
             plt.xlabel(self.class_names[train_labels[i][0]])
         plt.show()
 
+    # 加载数据
     @staticmethod
     def load_data(path):
         num_train_samples = 50000
